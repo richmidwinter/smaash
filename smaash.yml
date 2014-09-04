@@ -1,0 +1,29 @@
+auditLog: /tmp/audit.log
+
+database:
+  driverClass: org.h2.Driver
+  user: sa
+  password: sa
+  url: jdbc:h2:./db/smaash
+
+  #validationQuery: SELECT * FROM INFORMATION_SCHEMA.SYSTEM_TABLES
+  
+logging: # Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
+  level: INFO
+  loggers:
+    eu.wansdyke.smaash: DEBUG
+    org.hibernate: WARN
+    #org.hibernate.SQL: ALL
+  appenders:
+    - type: console
+    
+# SSL
+#server:
+#  applicationConnectors:
+#    - type: https
+#      port: 8443
+#      keyStorePath: example.keystore
+#      keyStorePassword: example
+#      validateCerts: false
+    
+authenticationCachePolicy: maximumSize=10000, expireAfterAccess=10m
