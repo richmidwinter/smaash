@@ -1,7 +1,7 @@
 Smaash
 ======
 
-Authorization as a service.
+Smaash is an authorization as a service implementation.
 
 # Authentication
 
