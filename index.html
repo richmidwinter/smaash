@@ -19,7 +19,7 @@
           <a id="forkme_banner" href="https://github.com/richmidwinter/smaash">View on GitHub</a>
 
           <h1 id="project_title">Smaash</h1>
-          <h2 id="project_tagline">AUTHORIZED</h2>
+          <h2 id="authd">AUTHORIZED</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/richmidwinter/smaash/zipball/master">Download this project as a .zip file</a>
@@ -71,7 +71,38 @@ e.g. curl https://server/smaash/logo.jpg/jbloggs
       </footer>
     </div>
 
-    
-
+    <script type="text/ecmascript">
+    (function() {
+      var replaceCharAt = function(input, index, character) {
+        return input.substr(0, index) +character +input.substr(index+1);
+      }
+      
+      var count = 0;
+      var message = "";
+      var interval = function() {
+        message = "AUTHORIZED";
+        for (var i = Math.round((count +1) / 10); i<message.length; i++) {
+	        var s = Math.round(Math.random() * 35);
+	        if (s > 9) {
+	          message = replaceCharAt(message, i, String.fromCharCode(s+55));
+	        } else {
+	          message = replaceCharAt(message, i, s);
+	        }
+        }
+        
+        document.getElementById("authd").innerHTML = message;
+        
+        count += 1;
+      };
+      
+      setInterval(function() {
+        if (count < 100) {
+          interval();
+        }
+      }, 20);
+      
+      setTimeout(function() { document.getElementById("authd").innerHTML +=  "." }, 2500);
+    })();
+    </script>
   </body>
 </html>
