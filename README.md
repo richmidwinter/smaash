@@ -78,4 +78,7 @@ e.g.
     
 e.g.
     curl https://localhost:8443/smaash/positions
-    
+
+# Log viewing
+
+
