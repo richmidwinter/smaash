@@ -54,7 +54,7 @@ e.g.
     With group names in a CSV body.
 
 e.g.
-    curl -X PUT -d "HR" https://localhost/smaash/r/logo.jpg/1
+    curl -X PUT -d "HR" https://localhost/smaash/r/logo.jpg
     
 ### Set group positions
 
