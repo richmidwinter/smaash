@@ -45,7 +45,7 @@ e.g.
     With group names in a CSV body.
 
 e.g.
-    curl -X PUT -d "HR,LONDON" https://localhost:8443/smaash/u/jbloggs
+    curl -X PUT -d "HR,LONDON" https://localhost/smaash/u/jbloggs
     
 ### Set a resource's access groups
 
@@ -54,7 +54,7 @@ e.g.
     With group names in a CSV body.
 
 e.g.
-    curl -X PUT -d "HR" https://localhost:8443/smaash/r/logo.jpg/1
+    curl -X PUT -d "HR" https://localhost/smaash/r/logo.jpg/1
     
 ### Set group positions
 
@@ -70,14 +70,14 @@ e.g.
     7: MANAGEMENT, \
     8: LONDON, \
     9: NEW YORK, \
-    10: PARIS" https://localhost:8443/smaash/positions
+    10: PARIS" https://localhost/smaash/positions
     
 ### List group positions
 
     GET /smaash/positions
     
 e.g.
-    curl https://localhost:8443/smaash/positions
+    curl https://localhost/smaash/positions
 
 # Log viewing
 
